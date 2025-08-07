@@ -1,0 +1,123 @@
+.diy-worktops {
+  padding: 3rem 5rem;
+  background: white;
+}
+
+.section-header-diy h2{
+       font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    color: #2c3e50;
+}
+
+.section-header-diy p{
+      font-size: 15.5px;
+    color: #6c757d;
+    max-width: 89%;
+    text-align: center;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.worktops-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  padding-top: 3rem;
+
+  margin-bottom: 3rem;
+}
+
+.worktop-cardnew {
+  background: white;
+  border: 1px solid #e5e9ed;
+  border-radius: 6px;
+  overflow: hidden;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  min-height: 280px;
+  box-shadow: 0 2px 8px rgba(31, 45, 58, 0.04);
+}
+
+.worktop-image {
+  height: 200px;
+  background: #ddd;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.worktop-cardnew h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: black;
+    font-size: 15px;
+    text-transform: uppercase;
+    margin: 0px;
+        row-gap: 15px;
+}
+
+
+.worktop-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .diy-worktops {
+    padding: 2rem 1rem; /* reduce padding on mobile */
+  }
+
+  .worktops-grid {
+    grid-template-columns: 1fr; /* single column on small screens */
+    gap: 1.5rem;
+    padding-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .worktop-image {
+    height: 180px; /* slightly smaller height for mobile */
+  }
+}
+
+
+/* Initial hidden state */
+.diy-worktops .section-header-diy,
+.diy-worktops .worktop-cardnew {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+/* When animate class is active */
+.diy-worktops.animate .section-header-diy {
+  animation: fadeUp 1s ease forwards;
+}
+
+.diy-worktops.animate .worktop-cardnew {
+  animation: fadeUp 1s ease forwards;
+}
+
+/* Keyframes */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

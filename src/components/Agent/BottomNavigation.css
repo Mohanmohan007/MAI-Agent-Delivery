@@ -1,0 +1,261 @@
+/* Bottom navigation wrapper */
+.bottom-navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  padding: 8px 0 calc(8px + env(safe-area-inset-bottom));
+  z-index: 100;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Container for nav items */
+.nav-container {
+display: flex
+;
+    justify-content: space-evenly;
+    align-items: center;
+    /* max-width: 100%; */
+    /* margin: 0 auto; */
+    width: 100%;
+    padding: 0 16px;
+}
+
+/* Nav items */
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  min-width: 60px;
+  position: relative;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+/* Hover effect */
+.nav-item:hover {
+  background: #f3f4f6;
+  transform: translateY(-2px);
+}
+
+/* Active state */
+.nav-item.active {
+  background: #eff6ff;
+}
+
+/* Icon styles */
+.nav-icon {
+  width: 24px;
+  height: 24px;
+  font-size: 18px;
+  color: #6b7280;
+  transition: color 0.3s ease;
+}
+
+.nav-item.active .nav-icon {
+  color: #2563eb;
+}
+
+/* Label styles */
+.nav-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #6b7280;
+  transition: color 0.3s ease;
+}
+
+.nav-item.active .nav-label {
+  color: #2563eb;
+}
+
+/* Optional notification badge */
+.nav-badge {
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  background: #ef4444;
+  color: white;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 10px;
+  min-width: 16px;
+  text-align: center;
+}
+
+.nav-badge.empty {
+  display: none;
+}
+
+.bottom-navigation {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #002d5b;
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 500px;
+}
+
+.nav-item {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: none;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+  padding: 4px;
+  transition: color 0.3s ease;
+  font-size: 13px;
+}
+
+.nav-item .nav-icon {
+  font-size: 20px;
+  margin-bottom: 2px;
+  transition: color 0.3s ease;
+}
+
+.nav-item.active .nav-icon,
+.nav-item.active .nav-label {
+  color: #003F6B; /* Highlight color */
+}
+
+/* Ripple animation effect */
+.active-ripple {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  z-index: -1;
+  animation: ripple 0.4s ease-out forwards;
+}
+
+@keyframes ripple {
+  0% {
+    transform: translateX(-50%) scale(0.8);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 1;
+  }
+}
+
+
+/* Mobile optimization */
+@media (max-width: 375px) {
+  .nav-item {
+    min-width: 50px;
+    padding: 6px 8px;
+  }
+
+  .nav-icon {
+    width: 20px;
+    height: 20px;
+    font-size: 16px;
+  }
+
+  .nav-label {
+    font-size: 11px;
+  }
+}
+
+
+/* Floating water-like animation for icons and labels */
+@keyframes waterFloat {
+  0% {
+    transform: translateY(0) scale(1);
+  }
+  25% {
+    transform: translateY(-3px) scale(1.03);
+  }
+  50% {
+    transform: translateY(0) scale(1);
+  }
+  75% {
+    transform: translateY(3px) scale(0.97);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Apply floating effect to both icon and label */
+.nav-item .nav-icon,
+.nav-item .nav-label {
+  animation: waterFloat 3s ease-in-out infinite;
+  display: inline-block;
+  will-change: transform;
+}
+
+/* Make the active one float slightly stronger */
+.nav-item.active .nav-icon,
+.nav-item.active .nav-label {
+  animation: waterFloat 2.5s ease-in-out infinite;
+  color: #003F6B; /* Optional highlight for active */
+}
+
+
+/* Floating + dancing rotation animation */
+@keyframes waterDance {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  20% {
+    transform: translateY(-3px) rotate(5deg) scale(1.03);
+  }
+  40% {
+    transform: translateY(0) rotate(-5deg) scale(1);
+  }
+  60% {
+    transform: translateY(3px) rotate(3deg) scale(0.98);
+  }
+  80% {
+    transform: translateY(0) rotate(-3deg) scale(1);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+}
+
+/* Apply floating + dancing to icon and label */
+.nav-item .nav-icon,
+.nav-item .nav-label {
+  animation: waterDance 3s ease-in-out infinite;
+  display: inline-block;
+  will-change: transform;
+  transform-origin: center;
+}
+
+/* Active state dances a bit faster + highlighted color */
+.nav-item.active .nav-icon,
+.nav-item.active .nav-label {
+  animation: waterDance 2.5s ease-in-out infinite;
+  color: #003F6B; /* Optional gold highlight for active */
+}

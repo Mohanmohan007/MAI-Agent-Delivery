@@ -1,0 +1,241 @@
+/* Container */
+.intern-section {
+  padding: 2rem 4.5rem;
+  max-width: 100%;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+/* Header */
+.intern-header {
+  text-align: left;
+  margin-bottom: 2rem;
+  width: 50%;
+}
+
+.intern-header h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.intern-header h2 span {
+  color: #000;
+}
+
+.intern-header p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  width: 86%;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+/* Button */
+.view-btnd {
+    margin-top: auto;
+    background: #003366;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 13px 33px;
+    font-size: 12px;
+    font-weight: normal;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.view-btnd:hover {
+  background-color: #002d5a;
+}
+
+/* Cards container */
+.intern-cards {
+  display: flex;
+  /* flex-wrap: wrap; */
+  width: 68%;
+  gap: 1.5rem;
+  justify-content: flex-start;
+}
+
+/* Card styles */
+.intern-card {
+  position: relative;
+  flex: 1 1 250px;
+  max-width: 170px;
+  border-radius: 12px;
+  overflow: hidden;
+ box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  background: #f8f8f8;
+}
+
+.intern-card:hover {
+  transform: translateY(-5px);
+}
+
+.intern-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%; /* Adjust height of glow */
+  background: linear-gradient(
+    to top,
+    rgba(0, 64, 128, 0.7) 0%,   /* Strong blue at bottom */
+    rgba(0, 64, 128, 0.3) 50%,  /* Fade upwards */
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+/* Image */
+.intern-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay text inside image */
+.intern-overlay {
+  position: absolute;
+  bottom: 17px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+  z-index: 1; /* Ensure text stays above gradient */
+
+}
+
+.intern-role {
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.intern-name {
+font-size: 13px;
+    font-weight: bold;
+    margin-top: 0.1rem;
+    font-family: system-ui;
+    margin-bottom: 3px !important;
+}
+
+/* Initials card (PW) */
+.intern-initials-card {
+  position: relative;
+  height: 250px;
+  background: linear-gradient(to bottom, #e0e0e0, #ffffff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intern-initials {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #004080;
+}
+
+/* Dots container */
+.intern-dots {
+  display: none;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 8px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  background-color: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #004080;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .intern-cards {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    flex-wrap: nowrap;
+    width: 90% !important;
+  }
+
+  .intern-section{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .intern-card {
+flex: 0 0 70%;
+        scroll-snap-align: center;
+        max-width: 100% !important;
+  }
+
+  .intern-dots {
+    display: flex;
+  }
+
+  .intern-header p{
+    width: 100% 
+    !important;
+  }
+
+  .intern-header{
+    width: 100% !important;
+    text-align: center;
+  }
+}
+
+
+
+/* Header initial */
+.intern-header {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Header visible */
+.intern-header.animate-header {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Cards initial */
+.intern-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Cards visible (fade + move up) */
+.intern-card.animate-card {
+  opacity: 1;
+  transform: translateY(0);
+}
+.intern-card.animate-card:nth-child(1) { transition-delay: 0.3s; }
+.intern-card.animate-card:nth-child(2) { transition-delay: 0.6s; }
+.intern-card.animate-card:nth-child(3) { transition-delay: 0.9s; }
+.intern-card.animate-card:nth-child(4) { transition-delay: 1.2s; }
+

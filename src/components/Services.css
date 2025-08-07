@@ -1,0 +1,433 @@
+
+
+
+
+
+
+
+
+/* Services Section */
+.services-section {
+  background-color: white;
+  padding: 20px 0;
+}
+
+.services-container {
+  max-width: 100%;
+    padding: 0 30px;}
+
+.services-section h2 {
+  text-align: start;
+  font-size: 30px;
+  font-weight: 700;
+  color: #333;
+  align-items: center;
+  justify-content: flex-start;
+  display: flex;
+  padding: 0px 25px;
+  margin-bottom: 10px !important;
+  gap: 8px;
+}
+
+.services-container h2 img {
+  width: 25px;
+  margin-top: 4px;
+}
+
+.services-title333{
+  margin-bottom: 0px !important;
+}
+/* Wrapper to enable overflow-hidden and position for overlays */
+.services-grid-wrapper {
+  position: relative;
+  overflow: hidden;
+  background: #f8f9fa;
+  margin: 0 -20px; /* Extend to full width */
+  padding: 2px 0;
+}
+
+/* Scrolling track - this is the key part for infinite scroll */
+.services-grid {
+  display: flex;
+  gap: 20px;
+  width: fit-content;
+  background-color: white !important;
+  animation: scroll-left 25s linear infinite;
+  will-change: transform;
+}
+
+/* Keyframe animation for continuous scrolling */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%); /* Move exactly half the width (one full set) */
+  }
+}
+
+/* Pause animation on hover */
+.services-grid-wrapper:hover .services-grid {
+  animation-play-state: paused;
+}
+
+.service-item {
+  text-align: center;
+  background-color: white !important;
+  border-radius: 12px;
+  padding: 15px;
+  /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); */
+  /* transition: all 0.3s ease; */
+  cursor: pointer;
+  flex-shrink: 0; /* Prevent items from shrinking */
+  width: 210px; /* Fixed width for consistent spacing */
+}
+
+
+
+.service-image {
+  width: 100%;
+  height: 210px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+
+
+.service-label {
+  font-size: 15px;
+  margin-top: 25px;
+  font-weight: 600;
+  color: #333;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Fade overlays for smooth visual effect */
+.services-grid-wrapper::before,
+.services-grid-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.services-grid-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, #f8f9fa 0%, rgba(248, 249, 250, 0) 100%);
+}
+
+.services-grid-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, #f8f9fa 0%, rgba(248, 249, 250, 0) 100%);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .services-grid {
+    animation-duration: 30s; /* Faster on mobile */
+  }
+  
+  .service-item {
+    width: 150px;
+  }
+  
+  .services-grid-wrapper::before,
+  .services-grid-wrapper::after {
+    width: 40px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.services-section333 {
+  padding: 2rem 0;
+  background-color: white;
+}
+
+.services-container333 {
+ max-width: 100%;
+    /* margin: 0 auto; */
+    padding: 0 5rem;
+
+}
+
+.services-header333 {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.services-title333 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111827;
+  /* margin-bottom: 1rem; */
+}
+
+@media (min-width: 1024px) {
+  .services-title333 {
+    font-size: 2rem;
+  }
+}
+
+.services-description333 {
+    font-size: 17px;
+    color: #6b7280;
+    max-width: 55rem;
+       margin-top: 14px !important;
+    margin: 0 auto;
+    line-height: 1.96;
+    font-family: system-ui;
+
+}
+
+.services-grid333 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+
+ 
+
+@media (min-width: 768px) {
+  .services-grid333 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+ 
+}
+
+@media (max-width: 768px) {
+.services-container333{
+    padding: 0px 2rem !important;
+  }
+
+ 
+}
+
+.service-card333 {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.service-card333:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.service-image-container333 {
+  height: 23rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-image333 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.service-card333:hover .service-image333 {
+  transform: scale(1.05);
+}
+
+.service-overlay333 {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.trader-bg333 {
+  background: linear-gradient(135deg, var(--mai-blue), #1e3a8a);
+}
+
+
+
+.ewwykkm{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 5px;
+}
+
+.service-content333 {
+position: absolute;
+    bottom: 0px;
+    width: 100%;
+    /* left: 1rem; */
+    /* right: 1rem; */
+    padding: 10px 15px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(10px);
+    /* border-radius: 8px;                 optional: smooth corners */
+}
+
+
+.trader-content333 {
+  color: white;
+}
+
+.service-title333 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+      margin-bottom: 0px !important;
+      margin-top: 0px !important;
+    text-align: center;
+}
+
+.service-text333 {
+  color: white;
+  font-size: 0.875rem;
+  line-height: 1.3;
+  margin: 2px 0px;
+}
+
+
+
+
+
+
+.service-content333 {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px 15px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(10px);
+  text-align: center;
+  transition: transform 1s ease, background-color 0.4s ease;
+  transform: translateY(10%); /* Show part of content initially */
+  border-radius: 0 0 15px 15px; /* smooth bottom corners */
+}
+
+/* Hover effect: slide up + darker bg like image */
+.service-card333:hover .service-content333 {
+    transform: translateY(0);
+    height: 100% !important;
+    display: flex
+;
+    flex-direction: column;
+    row-gap: 75px;
+     background-color: rgba(27, 79, 114, 0.6);
+}
+
+/* Title always visible (same style in hover and normal) */
+.service-content333 h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+/* Default (non-hover) text */
+.service-text333 {
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #fff;
+  display: block;
+}
+
+/* Hover text: hidden initially */
+.service-text333-hovered {
+  display: none;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  color: #fff;
+}
+
+/* Show hover text only on hover */
+.service-card333:hover .service-text333 {
+  display: none;
+}
+
+.service-card333:hover .service-text333-hovered {
+  display: block;
+}
+
+
+/* .trader333{
+  padding: 1rem 0;
+} */
+
+/* .trader-image333-hoverd {
+  opacity: 0.3;
+}
+
+.trader-overlay333-hovered {
+  background-color: rgba(27, 79, 114, 0.6);
+} */
+
+
+/* Initial hidden state */
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 2.5s ease-out, transform 2.5s ease-out;
+}
+
+/* When visible (triggered by JS) */
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger for cards */
+.stagger {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 2.5s ease-out, transform 2.5s ease-out;
+}
+
+/* Different delays for each card (nth-child) */
+.stagger.visible:nth-child(1) {
+  transition-delay: 0.6s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger.visible:nth-child(2) {
+  transition-delay: 0.9s;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger.visible:nth-child(3) {
+  transition-delay: 1.3s;
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -1,0 +1,947 @@
+
+
+.howwork-container {
+  font-family: Arial, sans-serif;
+  margin-top: 72px;
+  padding: 15px 0rem;
+}
+
+/* Tabs */
+.nav-tabs {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+    padding-bottom: 10px;
+
+}
+
+.tab_new {
+    padding: 10px 32px;
+  border: none;
+  background-color: #002d5b;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 200px;
+}
+
+/* Active state */
+.tab_new.active {
+  background-color: #1aa3ff;
+}
+
+/* First button rounded left */
+.tab_new:first-child {
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+/* Last button rounded right */
+.tab_new:last-child {
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+/* White separator between buttons */
+.tab_new:not(:last-child) {
+  border-right: 2px solid white;
+}
+
+.tab_new:not(.active):hover {
+  background-color: #004b85;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 85vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+}
+
+/* Dark transparent overlay */
+.hero-overlay {
+  width: 100%;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.6); /* semi-transparent black */
+}
+
+/* Text inside overlay */
+.hero-text-trade {
+  max-width: 700px;
+  color: white;
+}
+
+.hero-text-trade h2 {
+  font-size: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.hero-text-trade p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    margin-top: 5px;
+}
+
+.sign-up-btn {
+  background-color: #1aa3ff;
+  border: none;
+    padding: 7px 45px;
+  color: white;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.sign-up-btn:hover {
+  background-color: #007acc;
+}
+
+/* Vertical Side Label */
+.vertical-label {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: rotate(90deg) translateY(-50%);
+  transform-origin: right center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ccc;
+  padding-right: 15px;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .hero-section {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .hero-overlay {
+    padding: 20px;
+  }
+
+  .hero-text-trade {
+    max-width: 100%;
+  }
+
+  .vertical-label {
+    display: none;
+  }
+}
+/* ------------- */
+.projects-steps {
+  background-color: #065684;
+  color: #fff;
+  max-width: 100%;
+  /* margin: 30px auto 0 auto; */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px 60px;
+    padding: 25px 85px;
+  font-family: Arial, sans-serif;
+}
+
+.projects-steps h3 {
+    font-weight: 600;
+    font-size: 22px;
+    font-family: system-ui;
+    margin-top: 2px;
+    margin-bottom: 6px;
+}
+
+.projects-steps p {
+  font-size: 15px;
+  color: #bfd9e5;
+  line-height: 1.4;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin-top: 2px;
+}
+/* ---------------- */
+.stepbystep {
+  max-width: 100%;
+  margin: auto;
+  padding: 2rem 4.5rem /* responsive padding */
+}
+
+.stepby-p {
+  text-align: start;
+    font-size: 25px;
+    font-weight: 700;
+    color: #333;
+    align-items: center;
+    justify-content: flex-start;
+    display: flex
+;
+    padding: 0px 10px;
+    margin-bottom: 10px !important;
+    margin-top: 0px;
+    gap: 8px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+
+.step-img {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 0;
+  padding-bottom: 35.25%; /* aspect ratio for responsiveness (16:9) */
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+}
+/* ------------- */
+.project-matchmaking {
+  text-align: center;
+  padding: 0rem 2rem;
+  background-color: white;
+  font-family: 'Inter', sans-serif;
+}
+
+.project-matchmaking h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.project-matchmaking p {
+    font-size: 17px;
+    color: #6b7280;
+    max-width: 90%;
+    margin-top: 10px !important;
+    margin: 0 auto;
+    line-height: 1.6;
+    font-family: system-ui;
+}
+.efd67804e{
+  padding-top: 20px;
+}
+
+.perfect-match-btn {
+  margin-top: 2rem;
+  padding: 0.8em 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  background-color: #003e66;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.perfect-match-btn:hover {
+  background-color: #005089;
+}
+
+.matchmaking-note {
+  margin-top: 2rem;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .project-matchmaking {
+    padding: 3rem 1rem;
+  }
+
+  .project-matchmaking h2 {
+    font-size: 1.5rem;
+  }
+
+  .project-matchmaking p {
+    font-size: 1rem;
+  }
+
+  .perfect-match-btn {
+    width: 90%;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+  }
+
+  
+
+}
+
+.wedh76x2 {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* allows buttons to stack on small screens */
+  margin: 20px 0;
+}
+
+/* Base style */
+.wedh76x2 .tab_new {
+  padding: 10px 32px;
+  border: none;
+  background-color: #002d5b;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 200px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+/* Hover effect */
+.wedh76x2 .tab_new:hover {
+  background-color: #014080;
+  transform: translateY(-2px);
+}
+
+/* Active tab */
+.wedh76x2 .tab_new.active {
+  background-color: #1181eb;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive: full width on very small screens */
+@media (max-width: 480px) {
+  .wedh76x2 .tab_new {
+    width: 100%;
+    width: 250px; /* prevent being too large on mobile */
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .wedh76x2 {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+
+
+@media (max-width: 620px) {
+  
+.howwork-container {
+  font-family: Arial, sans-serif;
+  margin-top: 72px;
+  /* padding: 15px 0rem; */
+}
+}
+
+@media (max-width: 480px) {
+  .project-matchmaking h2 {
+    font-size: 1.3rem;
+  }
+
+  .perfect-match-btn {
+    font-size: 0.95rem;
+    padding: 0.7rem 1rem;
+  }
+}
+/* -------------------------- */
+.key-points-section {
+  padding: 2rem 4.5rem;
+  background-color: #ffffff;
+  text-align: left;
+  font-family: 'Inter', sans-serif;
+  /* max-width: 1000px; */
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 4.5rem;
+}
+
+.key-points-section h2 {
+  /* text-align: center; */
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  color: #111;
+  margin: 5px 0px !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.key-point {
+  margin-bottom: 0.6rem;
+}
+
+.key-point h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  color: #111;
+    margin: 5px 0px !important;
+
+}
+
+.key-point p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 10px 0px;
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+
+  .key-points-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .key-point h3 {
+    font-size: 1.2rem;
+  }
+
+  .key-point p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .key-points-section h2 {
+    font-size: 1.3rem;
+  }
+
+  .key-point h3 {
+    font-size: 1.1rem;
+  }
+
+  .key-point p {
+    font-size: 0.95rem;
+  }
+}
+/* ----------------------- */
+.trust-section {
+  padding: 0rem 4.5rem;
+  font-family: 'Inter', sans-serif;
+  text-align: center;
+}
+
+.trust-heading {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: start;
+  margin-bottom: 2.5rem;display: flex;
+  justify-content: flex-start;
+  color: #111;
+  margin: 5px 0px !important;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.trust-cards {
+  display: flex;
+  gap: 13px;
+  padding-top: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.trust-card {
+  background-color: #fff;
+  /* padding: 2rem; */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  max-width: 440px;
+  flex: 1 1 300px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+.trust-card h3 {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  margin: 2px 0px;
+  font-weight: 700;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.trust-card p {
+    margin-top: 0.8rem;
+    font-size: 15px;
+    color: #333;
+    line-height: 1.6;
+    padding: 0px 40px;
+    text-align: center;
+}
+
+.trust-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.eddseww{
+  padding-top: 2rem ;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+ 
+
+
+  .trust-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .trust-card p {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .trust-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* ------------------------ */
+.doalot-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.doalot-heading {
+  font-size: 28px;
+  font-weight: 700;
+  color: #0a2c53;
+  margin-bottom: 30px;
+  text-align: left;
+}
+
+.doalot-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+
+
+
+.doalot-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.doalot-card h3 {
+  font-size: 20px;
+  color: #0a2c53;
+  margin-bottom: 10px;
+}
+
+.doalot-card p {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.5;
+}
+/* ------------------------ */
+.oversight-grid-section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.oversight-title {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.oversight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.oversight-card {
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.oversight-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.oversight-card p {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+}
+/* ----------------------- */
+.oversight-container {
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.oversight-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+
+.oversight-card-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.oversight-card {
+  flex: 1 1 500px;
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+}
+
+.oversight-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.oversight-text {
+  padding: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  background-color: #fff;
+}
+/* --------------------- */
+.oversight-section {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 2rem 4.5rem;
+}
+
+.trust-heading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+/* Flex container for cards */
+.image-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem;
+    padding-top: 15px;
+    margin-bottom: 1rem;
+}
+
+/* Card Style */
+.image-card {
+  display: flex;
+  flex-direction: column; /* Stack image and text vertically */
+  flex: 1 1 48%;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/* Image inside the card */
+.image-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+/* Text below the image */
+.card-text {
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
+
+.hero-section-trade {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-section-trade::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url('../../assets/TraderBanner.jpeg'); /* Background image */
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
+/* White overlay for faded effect */
+.hero-section-trade::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 245, 225, 0.404); /* White with 50% opacity */
+  z-index: 1; /* Above image but below content */
+}
+
+/* Flex container for image + text */
+.hero-content-trade {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 0 4rem;
+    z-index: 2; /* above background */
+
+}
+
+/* Cartoon trader (bottom-left) */
+.hero-image-trade {
+  position: absolute;
+  bottom: -8px;
+  left: 3rem;
+}
+
+.hero-image-trade img {
+  max-width: 500px;
+  height: auto;
+}
+
+/* Right text box (dark overlay) */
+.hero-overlay-trade {
+  margin-left: auto;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 480px !important;
+  color: #fff;
+  position: relative;
+  top: -150px;
+}
+
+.hero-text-trade h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text-trade p {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.8;
+}
+
+.sign-up-btn {
+  background-color: #3a7afe;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.sign-up-btn:hover {
+  background-color: #0056d2;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .hero-content-trade {
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0rem 0rem;
+    align-items: center;
+  }
+  .hero-text-trade
+
+ {
+    max-width: 700px;
+    text-align: start;
+    color: white;
+}
+
+  .hero-image-trade {
+    position: static;
+    /* margin-bottom: 1.5rem; */
+  }
+
+ 
+
+  .hero-overlay-trade {
+  max-width: 170vh !important;
+        text-align: center;
+        width: 100%;
+        top: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-section-trade {
+    height: auto;
+    /* padding: 2rem 0; */
+  }
+
+  .hero-overlay-trade {
+    padding: 20px;
+  }
+
+  .hero-text-trade h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero-text-trade p {
+    font-size: 0.9rem;
+  }
+}
+
+.howitworks-section {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.howitworks-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.howitworks-subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.howitworks-heading {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+/* Steps Container */
+.howitworks-steps {
+  display: flex;
+  flex-direction: column;
+  gap:5px;
+}
+
+/* Individual Step */
+.howitworks-step {
+display: flex
+;
+
+    align-items: flex-start;
+    gap: 5px;
+    flex-direction: column;
+    /* background: #e9f2fb; */
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.dscjdskj{
+      margin-top: 10px;
+    padding: 0.8em 1.5rem;
+    font-size: 10px;
+    font-weight: 600;
+    background-color: #003e66;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.howitworks-icon {
+  font-size: 13px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.howitworks-step h4 {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 0 0.2rem 0;
+  margin-bottom: 0px !important;
+}
+
+.howitworks-step p {
+  font-size: 11.5px;
+  background-color: #DBE7F1;
+  margin: 0;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.edwedswe3{
+  width: 100%;
+  text-align: start;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .howitworks-title {
+    font-size: 1.5rem;
+  }
+  .howitworks-subtitle {
+    font-size: 0.9rem;
+  }
+  .howitworks-step {
+    flex-direction: column;
+    text-align: left;
+  }
+}
+
+
+
+
+
+
+
+/* Responsive styles */
+@media (max-width: 800px) {
+
+  .image-box {
+    flex: 1 1 100%;
+    height: 300px;
+    width: 300px;
+  }
+}
+
+
+

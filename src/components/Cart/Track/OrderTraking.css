@@ -1,0 +1,464 @@
+/* ========== GLOBAL ========== */
+.order-tracking-88 {
+  min-height: 100vh;
+  background: #f4f7fb;
+  font-family: 'Inter', sans-serif;
+  color: #1e4a6b;
+  padding-bottom: 2rem;
+}
+
+/* Main container layout */
+.main-container-88 {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.grid-layout-88 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 1024px) {
+  .grid-layout-88 {
+    grid-template-columns: 40% 60%;
+  }
+}
+
+/* ========== CARD BASE STYLES ========== */
+.order-card-88,
+.agent-card-88,
+.details-card-88,
+.gallery-card-88,
+.timeline-card-88 {
+  background: linear-gradient(135deg, #ffffff 0%, #eaf3fa 100%);
+  border: 1px solid #d0e2f0;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 12px rgba(30, 74, 107, 0.08);
+  padding: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.order-card-88:hover,
+.agent-card-88:hover,
+.details-card-88:hover,
+.gallery-card-88:hover,
+.timeline-card-88:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(30, 74, 107, 0.2);
+}
+
+/* ========== ORDER CARD ========== */
+.order-header-88 h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e4a6b;
+  margin-bottom: 0.25rem;
+}
+
+.product-name-88 {
+  font-size: 0.9rem;
+  color: #5b7080;
+  margin-bottom: 0.5rem;
+}
+
+.order-amount-88 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e4a6b;
+  margin-bottom: 1rem;
+}
+
+.status-img-wrapper-88 {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.status-img-88 {
+  width: 280px;
+  height: 220px;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  border: 2px solid #d0e2f0;
+}
+
+/* Status badge */
+.status-badge-88 {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: #f0f4f8;
+  color: #1e4a6b;
+}
+
+.status-dot-88 {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: currentColor;
+  margin-right: 0.5rem;
+}
+
+/* Specific badge colors */
+.status-placed-88 {
+  background: #dce8f7;
+  color: #1e4a6b;
+}
+.status-dispatched-88 {
+  background: #fff0c2;
+  color: #b7791f;
+}
+.status-delivery-88 {
+  background: #c4f1f9;
+  color: #0b7285;
+}
+.status-delivered-88 {
+  background: #e6f7dc;
+  color: #2f855a;
+}
+
+.delivery-info-88,
+.address-info-88 {
+  font-size: 0.9rem;
+  margin-top: 0.75rem;
+}
+
+.delivery-label-88 {
+  color: #5b7080;
+}
+
+.address-label-88 {
+  color: #5b7080;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+/* ========== AGENT CARD ========== */
+.agent-card-88 h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.agent-info-88 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.agent-details-88 {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.agent-avatar-88 {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: #1e4a6b;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.agent-name-88 {
+  font-weight: 600;
+  font-size: 1rem;
+  color: #1e4a6b;
+}
+
+.agent-phone-88 {
+  font-size: 0.85rem;
+  color: #5b7080;
+}
+
+.agent-actions-88 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.action-btn-88 {
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Buttons with blue theme */
+.call-btn-88 {
+  background: #cce7e0;
+  color: #0b7285;
+}
+.call-btn-88:hover {
+  background: #a9dbd3;
+}
+
+.message-btn-88 {
+  background: #d4e4f7;
+  color: #1e4a6b;
+}
+.message-btn-88:hover {
+  background: #b8d0f3;
+}
+
+/* ========== DETAILS CARD ========== */
+.details-card-88 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+}
+
+.details-card-88 li {
+  font-size: 0.9rem;
+  margin: 0.25rem 0;
+  color: #1e4a6b;
+}
+
+/* ========== GALLERY CARD ========== */
+.gallery-grid-88 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.gallery-grid-88 img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  border: 2px solid #d0e2f0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid-88 img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(30, 74, 107, 0.25);
+}
+
+/* ========== TIMELINE ========== */
+.timeline-card-88 h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  color: #1e4a6b;
+}
+
+.timeline-88 {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.timeline-88::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0.8rem;
+  width: 4px;
+  height: 100%;
+  background: #d0e2f0;
+}
+
+.timeline-item-88 {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.timeline-item-88.completed .timeline-marker-88 {
+  background: #1e4a6b;
+  box-shadow: 0 0 0 2px #b8d0f3;
+}
+
+.timeline-marker-88 {
+  position: absolute;
+  left: -0.2rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: #d0e2f0;
+  border: 3px solid white;
+}
+
+.timeline-content-88 {
+     display: flex
+;
+    color: white;
+    padding: 10px 20px;
+    gap: 2rem;
+    border-radius: 17px;
+    background-color: #1d557f;
+    align-items: center;
+}
+
+.timeline-img-88 {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  border: 2px solid #d0e2f0;
+}
+
+.wejdsu79i3 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.timeline-place-88 {
+  font-size: 0.5rem;
+  color: white;
+  margin: 2px 0px;
+}
+
+.timeline-time-88 {
+  font-size: 0.8rem;
+  color: #1e4a6b;
+  font-weight: 500;
+}
+
+/* Full Width Reviews Section */
+.reviews-section-88 {
+  width: 100%;
+  background: linear-gradient(135deg, #f2f8fc 0%, #ffffff 100%);
+  border-top: 3px solid #1e4a6b;
+  padding: 2rem 1.5rem;
+  margin-top: 2rem;
+}
+
+.reviews-title-88 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e4a6b;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.reviews-summary-88 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid #d0e2f0;
+}
+
+.reviews-score-88 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.score-88 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e4a6b;
+}
+
+.stars-88 {
+  font-size: 1.2rem;
+  color: #f6b93b;
+}
+
+.half-star-88 {
+  color: #d1d5db;
+}
+
+/* Reviews List - Full Width Style */
+.reviews-list-88 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.review-item-88 {
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e2edf5;
+}
+
+.review-avatar-88 {
+  width: 3rem;
+  height: 3rem;
+  background: #1e4a6b;
+  color: white;
+  border-radius: 50%;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.review-header-88 {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #5b7080;
+}
+
+.review-stars-88 {
+  font-size: 1rem;
+  color: #f6b93b;
+  margin: 0.25rem 0;
+}
+
+.review-text-88 {
+  font-size: 0.95rem;
+  color: #1e4a6b;
+  margin: 0;
+}
+
+/* Write Review Button */
+.write-review-btn-88 {
+  padding: 0.6rem 1rem;
+  border-radius: 0.375rem;
+  background: #1e4a6b;
+  color: white;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.write-review-btn-88:hover {
+  background: #16364e;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .reviews-summary-88 {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .reviews-section-88 {
+    padding: 1.5rem 1rem;
+  }
+}
+
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 768px) {
+  .timeline-content-88 {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .timeline-img-88 {
+    width: 100%;
+    height: 180px;
+  }
+}
