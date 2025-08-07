@@ -68,7 +68,7 @@
     "wouter": "^3.7.1",
     "xlsx": "^0.18.5"
   },
-  "homepage": "https://mohanmohan007.github.io/BCS-CARE/",
+  "homepage": "https://github.com/Mohanmohan007/MAI-Agent-Delivery.git",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
